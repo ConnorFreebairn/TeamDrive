@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-# apt-get update
+# apt update
+# apt install curl -y
 # curl https://rclone.org/install.sh | sudo bash
 
 mkdir /mnt/TeamDrive
