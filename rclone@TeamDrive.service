@@ -1,0 +1,15 @@
+[Unit]
+Description=rclone: Remote FUSE filesystem for cloud storage config %i
+Documentation=man:rclone(1)
+[Service]
+Type=notify
+ExecStartPre=/bin/mkdir -p /mnt/
+ExecStart= \
+  /usr/bin/rclone mount \
+    --fast-list \
+    --vfs-cache-mode writes \
+    --vfs-cache-max-size 100M \
+    --allow-other \
+    %i: /mnt/%i
+[Install]
+WantedBy=default.target
