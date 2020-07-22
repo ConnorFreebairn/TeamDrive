@@ -17,7 +17,7 @@ ExecStart= \
     --vfs-read-chunk-size-limit 2048m \
     --buffer-size 64m \
     --drive-chunk-size 64m \
-    --tpslimit 10\
+    --tpslimit 10 \
     --rc \
     %i: /mnt/%i
 [Install]
