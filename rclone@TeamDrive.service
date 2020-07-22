@@ -10,6 +10,15 @@ ExecStart= \
     --vfs-cache-mode writes \
     --vfs-cache-max-size 100M \
     --allow-other \
+    --timeout 1h \
+    --dir-cache-time 1000h \
+    --poll-interval 1m \
+    --vfs-read-chunk-size 64m \
+    --vfs-read-chunk-size-limit 2048m \
+    --buffer-size 64m \
+    --drive-chunk-size 64m \
+    --tpslimit 10\
+    --rc \
     %i: /mnt/%i
 [Install]
 WantedBy=default.target
